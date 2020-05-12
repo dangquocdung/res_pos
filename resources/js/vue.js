@@ -30,7 +30,7 @@ if(window.location.hostname == 'dad.technic.pt'){
 } else {
     Vue.use(new VueSocketio({
         debug: true,
-        connection: 'http://127.0.0.1:8080'
+        connection: 'http://nhahang.dungthinh.com:8080'
     }));
 }
 
@@ -195,7 +195,6 @@ const app = new Vue({
             this.$refs.notifications.addNotif(`Order (${order.item.name}) has been picked up by another cook`,
                 (order.item.type === 'dish' ? 'fa-cutlery' : 'fa-glass')
                 + " text-red", "/#/cookOrders");
-
 
             this.$store.commit('deleteOrder', order)
         },
