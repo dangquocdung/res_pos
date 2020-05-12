@@ -24,11 +24,11 @@ class LoginControllerAPI extends Controller
         }
 
         $http = new \GuzzleHttp\Client;
-        $response = $http->post('http://nhahang.dungthinh.com/oauth/token', [
+        $response = $http->post(YOUR_SERVER_URL.'/oauth/token', [
             'form_params' => [
                 'grant_type' => 'password',
-                'client_id' => CLIENT_ID,
-                'client_secret' => CLIENT_SECRET,
+                'client_id' => '2',
+                'client_secret' => '3eoy92Bne1qsBps3E6OUUevfU2sE4GTc1Tami8dC',
                 'username' => $email,
                 'password' => $request->password,
                 'scope' => ''
