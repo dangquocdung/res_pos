@@ -4,11 +4,11 @@
 
 @section('header')
 <!-- Logo -->
-<a href="../../index2.html" class="logo">
+<a href="#" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini"><b>D</b>AD</span>
+    <span class="logo-mini"><b>ĐQD</b></span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b>DAD</b></span>
+    <span class="logo-lg"><b>ĐQD</b></span>
 </a>
 <!-- Header Navbar: style can be found in header.less -->
 <nav class="navbar navbar-static-top">
@@ -97,8 +97,8 @@
                     </li>
                 </ul>
             </li>-->
-            <shift-button v-if="this.$store.state.user"></shift-button>
-            <shift-counter v-if="this.$store.state.user" ref="shiftCounter"></shift-counter>
+            {{-- <shift-button v-if="this.$store.state.user"></shift-button> --}}
+            {{-- <shift-counter v-if="this.$store.state.user" ref="shiftCounter"></shift-counter> --}}
             <notifications v-if="this.$store.state.user" ref="notifications"></notifications>
             <li class="dropdown user user-menu" v-if="this.$store.state.user">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
