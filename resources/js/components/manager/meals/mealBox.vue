@@ -9,7 +9,7 @@
                     <i class="fa fa-minus"></i></button>
             </div>
         </div>
-        <div class="box-body">
+        <div class="box-body table-responsive">
             <p>Waiter: {{meal.responsible_waiter}}</p>
             <p>Date: {{meal.start.slice(0,10)}}</p>
             <table class="table table-striped">

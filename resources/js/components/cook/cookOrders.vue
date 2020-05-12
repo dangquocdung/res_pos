@@ -3,7 +3,7 @@
         <div class="box-header with-border">
             <h3 class="box-title">Orders</h3>
         </div>
-        <div class="box-body">
+        <div class="box-body table-responsive">
             <template v-if="orders">
                 <table class="table table-striped">
                     <thead>

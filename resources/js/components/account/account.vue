@@ -4,7 +4,7 @@
             <h3 class="box-title">Edit Account Information</h3>
         </div>
         <!-- /.box-header -->
-        <div class="box-body" v-if="changedUser">
+        <div class="box-body table-responsive" v-if="changedUser">
             <div class="form-group">
                 <label for="inputEmail">Email</label>
                 <div class="form-control" id="inputEmail" style="background-color:#eee">{{ changedUser.email }}</div>

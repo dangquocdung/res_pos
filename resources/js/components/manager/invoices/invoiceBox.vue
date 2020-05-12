@@ -9,7 +9,7 @@
                     <i class="fa fa-minus"></i></button>
             </div>
         </div>
-        <div class="box-body">
+        <div class="box-body table-responsive">
             <p>Waiter: {{invoice.waiter}}</p>
             <p>Date: {{invoice.date}}</p>
             <p>State: {{invoice.state}}</p>

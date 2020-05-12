@@ -3,7 +3,7 @@
         <div class="box-header with-border">
             <h3 class="box-title">Menu</h3>
         </div>
-        <div class="box-body">
+        <div class="box-body table-responsive">
             <!--MENU LIST-->
             <template v-if="items">
                 <table class="table table-striped">

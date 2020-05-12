@@ -4,7 +4,7 @@
             <h3 class="box-title">Login</h3>
         </div>
         <!-- /.box-header -->
-        <div class="box-body">
+        <div class="box-body table-responsive">
             <div class="form-group">
                 <label for="inputEmail">Email or Username</label>
                 <input

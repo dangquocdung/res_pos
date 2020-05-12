@@ -4,7 +4,7 @@
             <div class="box-header with-border">
                 <h3 class="box-title">Items</h3>
             </div>
-            <div class="box-body">
+            <div class="box-body table-responsive">
                 <div class="panel panel-info">
                     <div class="panel-body">
                         <!--TABLE LIST-->

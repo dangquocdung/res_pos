@@ -4,7 +4,7 @@
             <h3 class="box-title">Submit your new password</h3>
         </div>
         <!-- /.box-header -->
-        <div class="box-body">
+        <div class="box-body table-responsive">
             <template v-if="id && hash">
                 <div class="form-group" :class="{'has-error': !validPassword}">
                     <label for="inputPassword">Password</label>

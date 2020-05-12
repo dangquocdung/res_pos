@@ -3,7 +3,7 @@
         <div class="box-header with-border">
             <h3 class="box-title">Meal {{ meal.id }} - Table {{meal.table_number_id}}</h3>
         </div>
-        <div class="box-body">
+        <div class="box-body table-responsive">
             <table class="table table-striped" v-if="completedOrders.length !== 0">
                 <thead>
                     <tr>

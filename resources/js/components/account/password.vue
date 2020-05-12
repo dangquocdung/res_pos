@@ -4,7 +4,7 @@
             <h3 class="box-title">Submit your new password</h3>
         </div>
         <!-- /.box-header -->
-        <div class="box-body">
+        <div class="box-body table-responsive">
             <div class="form-group">
                 <button class="btn btn-default" @click="$router.push('account')" :disabled="disable">< Back</button>
             </div>

@@ -20,7 +20,7 @@
                     <i class="fa fa-minus"></i></button>
             </div>
         </div>
-        <div class="box-body">
+        <div class="box-body table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
