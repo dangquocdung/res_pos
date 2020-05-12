@@ -30,7 +30,7 @@ if(window.location.hostname == 'nhahang.dungthinh.com'){
 } else {
     Vue.use(new VueSocketio({
         debug: true,
-        connection: 'http://127.0.0.1:8080'
+        connection: 'http://nhahang.dungthinh.com:8080'
     }));
 }
 
