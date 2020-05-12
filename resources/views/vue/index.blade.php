@@ -212,5 +212,5 @@
     @endsection
 
 @section('pagescript')
-<script src="{{ mix('./js/vue.js') }}"></script>
+<script src="{{ mix('js/vue.js') }}"></script>
 @stop
