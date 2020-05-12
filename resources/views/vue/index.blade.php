@@ -98,7 +98,7 @@
                 </ul>
             </li>-->
             <shift-button v-if="this.$store.state.user"></shift-button>
-            <shift-counter v-if="this.$store.state.user" ref="shiftCounter"></shift-counter>
+            {{-- <shift-counter v-if="this.$store.state.user" ref="shiftCounter"></shift-counter> --}}
             <notifications v-if="this.$store.state.user" ref="notifications"></notifications>
             <li class="dropdown user user-menu" v-if="this.$store.state.user">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
