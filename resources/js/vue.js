@@ -22,15 +22,15 @@ import VueSweetalert2 from 'vue-sweetalert2';
 Vue.use(VueSweetalert2);
 
 import VueSocketio from 'vue-socket.io';
-if(window.location.hostname == 'dad.technic.pt'){
+if(window.location.hostname == 'nhahang.dungthinh.com'){
     Vue.use(new VueSocketio({
         debug: false,
-        connection: 'http://dad.technic.pt:8080'
+        connection: 'http://nhahang.dungthinh.com:8080'
     }));
 } else {
     Vue.use(new VueSocketio({
         debug: true,
-        connection: 'http://nhahang.dungthinh.com:8080'
+        connection: 'http://127.0.0.1:8080'
     }));
 }
 
