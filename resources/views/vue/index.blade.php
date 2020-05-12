@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', 'Restaurant')
+@section('title', 'Nhà hàng thông minh')
 
 @section('header')
 <!-- Logo -->
@@ -121,7 +121,7 @@
                     <li class="user-footer">
                         <div class="pull-left">
                             <router-link to="/account" class="btn btn-default btn-flat">
-                                <i class="fa fa-briefcase"></i> <span>Account</span>
+                                <i class="fa fa-briefcase"></i> <span>Tài khoản</span>
                             </router-link>
                         </div>
                         <logout></logout>
@@ -129,7 +129,7 @@
                 </ul>
             </li>
             <li v-show="!this.$store.state.user">
-                <router-link to="/login"><i class="fa fa-sign-in"></i> <span>Login</span></router-link>
+                <router-link to="/login"><i class="fa fa-sign-in"></i> <span>Đăng nhập</span></router-link>
             </li>
         </ul>
     </div>
@@ -145,26 +145,26 @@
     </div>
     <div class="pull-left info">
         <p>@{{this.$store.state.user.name}}</p>
-        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        <a href="#"><i class="fa fa-circle text-success"></i> Trực tuyến</a>
     </div>
 </div>
 <!-- sidebar menu: : style can be found in sidebar.less -->
 <ul class="sidebar-menu" data-widget="tree">
     <li class="header">MAIN NAVIGATION</li>
 
-    <li><router-link to="/itemsMenu"><i class="fa fa-table"></i><span>Menu</span></router-link></li>
+    <li><router-link to="/itemsMenu"><i class="fa fa-table"></i><span>Thực đơn</span></router-link></li>
 
     <template v-if="this.$store.state.user">
         <template v-if="this.$store.state.user.type === 'waiter'">
-            <li><router-link to="/waiter"><i class="fa fa-briefcase"></i> <span>Waiter</span></router-link></li>
+            <li><router-link to="/waiter"><i class="fa fa-briefcase"></i> <span>Bồi bàn</span></router-link></li>
         </template>
 
         <template v-if="this.$store.state.user.type === 'cashier'">
-            <li><router-link to="/cashier"><i class="fa fa-briefcase"></i> <span>Cashier</span></router-link></li>
+            <li><router-link to="/cashier"><i class="fa fa-briefcase"></i> <span>Thu ngân</span></router-link></li>
         </template>
 
         <template v-if="this.$store.state.user.type === 'cook'">
-            <li><router-link to="/cookOrders"><i class="fa fa-coffee"></i> <span>Orders</span></router-link></li>
+            <li><router-link to="/cookOrders"><i class="fa fa-coffee"></i> <span>Đầu bếp</span></router-link></li>
         </template>
 
         <template v-if="this.$store.state.user.type === 'manager'">
