@@ -1,7 +1,7 @@
 <template>
     <div class="box" :id="'box' + invoice.id" data-widget="box-widget">
         <div class="box-header with-border">
-            <h3 class="box-title">Invoice {{ invoice.id }} - Table {{invoice.table}} - {{invoice.date}}</h3>
+            <h3 class="box-title">Hoá đơn số {{ invoice.id }} - Bàn {{invoice.table}} - {{invoice.date}}</h3>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -10,15 +10,15 @@
             </div>
         </div>
         <div class="box-body table-responsive">
-            <p>Waiter: {{invoice.waiter}}</p>
-            <p>Costumer: {{invoice.name}} PT{{invoice.nif}}</p>
+            <p>Người phục vụ: {{invoice.waiter}}</p>
+            <p>Khách hàng: {{invoice.name}} MST: {{invoice.nif}}</p>
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Sub-total</th>
+                    <th>Món</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -32,10 +32,10 @@
                 </template>
                 <tr class="table-warning">
                     <td>
-                        <a class="btn btn-sm btn-default" v-on:click.prevent="printPDF(invoice)">Print to PDF</a>
+                        <a class="btn btn-sm btn-default" v-on:click.prevent="printPDF(invoice)">In ra PDF</a>
                     </td>
                     <td></td>
-                    <td>Total Price:</td>
+                    <td>Tổng cộng:</td>
                     <td>{{ invoice.total_price }}đ</td>
                 </tr>
                 </tbody>
@@ -144,7 +144,7 @@
                             columns: [
                                 [
                                     {
-                                        text: invoice.state + ' INVOICE',
+                                        text: invoice.state + ' HOÁ ĐƠN',
                                         style: 'invoiceTitle',
                                         width: '*'
                                     },
@@ -153,7 +153,7 @@
                                             {
                                                 columns: [
                                                     {
-                                                        text:'Invoice #',
+                                                        text:'Hoá đơn #',
                                                         style:'invoiceSubTitle',
                                                         width: '*'
 
@@ -169,7 +169,7 @@
                                             {
                                                 columns: [
                                                     {
-                                                        text:'Date Issued',
+                                                        text:'Ngày bán',
                                                         style:'invoiceSubTitle',
                                                         width: '*'
                                                     },
@@ -189,12 +189,12 @@
                         {
                             columns: [
                                 {
-                                    text: 'Billing From',
+                                    text: 'Bên bán',
                                     style:'invoiceBillingTitle',
 
                                 },
                                 {
-                                    text: 'Billing To',
+                                    text: 'Bên mua',
                                     style:'invoiceBillingTitle',
 
                                 },
@@ -238,7 +238,7 @@
                                 body: [
                                     [
                                         {
-                                            text:'TOTAL',
+                                            text:'TỔNG CỘNG',
                                             style:'itemsFooterTotalTitle'
                                         },
                                         {
