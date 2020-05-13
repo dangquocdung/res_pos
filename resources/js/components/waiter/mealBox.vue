@@ -44,13 +44,13 @@
                     <td>
                         <a class="btn btn-sm btn-success" v-if="this.showAllOrders"
                            @click="showAllOrders = !showAllOrders">
-                            Less Details
+                            Bớt chi tiết
                         </a>
                         <a class="btn btn-sm btn-success" v-if="!this.showAllOrders"
                            @click="showAllOrders = !showAllOrders">
-                            More Details
+                            Thêm chi tiết
                         </a>
-                        <a class="btn btn-sm btn-danger" @click="terminateMeal">Terminate</a>
+                        <a class="btn btn-sm btn-danger" @click="terminateMeal">Chấm dứt</a>
                     </td>
                 </tr>
                 </tbody>
