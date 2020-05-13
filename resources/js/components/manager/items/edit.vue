@@ -1,6 +1,6 @@
 <template>
 	<div class="jumbotron">
-	    <h2>Edit Item</h2>
+	    <h2>Sửa món</h2>
 	    <div class="form-group">
 	        <label for="inputName">Tên</label>
 	        <input
