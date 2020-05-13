@@ -1,17 +1,17 @@
 <template>
     <div class="box box-info" v-if="meal">
         <div class="box-header with-border">
-            <h3 class="box-title">Meal {{ meal.id }} - Table {{meal.table_number_id}}</h3>
+            <h3 class="box-title">Bữa ăn {{ meal.id }} - Bàn {{meal.table_number_id}}</h3>
         </div>
         <div class="box-body table-responsive">
             <table class="table table-striped" v-if="completedOrders.length !== 0">
                 <thead>
                     <tr>
-                        <th>Item</th>
-                        <th>Price</th>
-                        <th>Cooker</th>
-                        <th>State</th>
-                        <th>Actions</th>
+                        <th>Món</th>
+                        <th>Giá</th>
+                        <th>Đầu bếp</th>
+                        <th>Tình trạng</th>
+                        <th>Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,7 +25,7 @@
                         </td>
                         <td>{{ order.item.price }}€</td>
                         <td>
-                            {{ order.responsible_cook ? order.responsible_cook.name : 'No cook yet' }}
+                            {{ order.responsible_cook ? order.responsible_cook.name : 'Chưa nấu' }}
                         </td>
                         <td>
                             <span class="label label-info"
@@ -47,11 +47,11 @@
                        @set-order-info="setOrderInfo(order, $event)" :key="order.num"/>
             </template>
 
-            <button class="btn btn-link" @click="addOrderElement">   + Add order to meal</button>
+            <button class="btn btn-link" @click="addOrderElement">   + Thêm món vào bữa ăn</button>
         </div>
         <div class="box-footer">
             <button type="button" class="btn btn-primary pull-left"
-                    @click="doneMeal">Done</button>
+                    @click="doneMeal">Xong</button>
         </div>
     </div>
 </template>
