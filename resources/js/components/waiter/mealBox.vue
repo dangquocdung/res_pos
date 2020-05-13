@@ -13,11 +13,11 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Price</th>
-                    <th>Cooker</th>
-                    <th>State</th>
-                    <th>Actions</th>
+                    <th>Món</th>
+                    <th>Giá</th>
+                    <th>Đầu bếp</th>
+                    <th>Tình trạng</th>
+                    <th>Thao tác</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -26,8 +26,8 @@
                                  'table-green': order.state === 'confirmed'}"
                         :key="order.id">
                         <td><i class="fa" :class="{'fa-glass': order.item.type == 'drink', 'fa-cutlery': order.item.type == 'dish'}" aria-hidden="true"></i> {{ order.item.name }}</td>
-                        <td>{{ order.item.price }}€</td>
-                        <td>{{ order.responsible_cook ? order.responsible_cook.name : 'No cook yet' }}</td>
+                        <td>{{ order.item.price }}đ</td>
+                        <td>{{ order.responsible_cook ? order.responsible_cook.name : 'Chưa nấu' }}</td>
                         <td><span class="label label-info"
                                   :class="{'label-warning': order.state === 'pending', 'label-success': order.state === 'confirmed'}">{{ order.state }}</span>
                         </td>
@@ -37,8 +37,8 @@
                         </td>
                     </tr>
                 <tr>
-                    <td>Total Price:</td>
-                    <td>{{ totalPrice }}€</td>
+                    <td>Tổng cộng:</td>
+                    <td>{{ totalPrice }}đ</td>
                     <td></td>
                     <td></td>
                     <td>
