@@ -2,7 +2,7 @@
     <div>
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Items</h3>
+                <h3 class="box-title">Món</h3>
             </div>
             <div class="box-body table-responsive">
                 <div class="panel panel-info">
@@ -25,7 +25,7 @@
         </div>
             <!-- /.box-body -->
         <div class="box-footer">
-            Footer
+            <!-- Footer -->
         </div>
         <!-- /.box-footer-->
     </div>
@@ -50,13 +50,13 @@
             insertError: function() {
                 this.$swal({
                     type: 'error',
-                    text: 'Oh no! We suspect there were missing arguments.'
+                    text: 'Ôi không! Chúng tôi nghi ngờ có những thông tin bị thiếu.'
                 });
             },
             editError: function() {
                 this.$swal({
                     type: 'error',
-                    text: 'Oh no! Probably that name was taken.'
+                    text: 'Ôi không! Có lẽ tên món đã được đặt.'
                 });
             },
             editItem: function(item){
@@ -68,15 +68,15 @@
                     .then(response => {
                         this.$swal({
                             type: 'success',
-                            title: 'Success',
-                            text: 'Item deleted successfully!'
+                            title: 'Thành công',
+                            text: 'Món đã bị xoá!'
                         });
                         this.getItems();
                     })
                     .catch(error => {
                         this.$swal({
                             type: 'error',
-                            text: "Oh no, we hope it doens't happen again!"
+                            text: "Ồ không, chúng tôi hy vọng nó sẽ không xảy ra lần nữa!"
                         });
                     });
             },
@@ -86,8 +86,8 @@
             addItem: function(){
                 this.$swal({
                     type: 'success',
-                    title: 'Success',
-                    text: 'Item inserted successfully!'
+                    title: 'Thành công',
+                    text: 'Thêm món thành công!'
                 });
                 this.getItems();
             },
@@ -99,8 +99,8 @@
                 this.$refs.itemsListRef.editingItem = null;
                 this.$swal({
                     type: 'success',
-                    title: 'Success',
-                    text: 'Item updated successfully!'
+                    title: 'Thành công',
+                    text: 'Cập nhật món thành công!'
                 });
                 this.getItems();
             },
@@ -119,7 +119,7 @@
                     }).catch(error => {
                         this.$swal({
                             type: 'error',
-                            text: "Oh no, getting items from DB is not working!"
+                            text: "Ồ không, nhận các mục từ DB không hoạt động!"
                         });
                     });
             }
