@@ -2,7 +2,7 @@
     <div class="box box-info" v-if="this.$store.state.user.shift_active === 0">
         <div class="box-header with-border">
             <div class="text-center">
-                You are not doing a shift
+                Bạn không trong ca làm
             </div>
         </div>
     </div>
