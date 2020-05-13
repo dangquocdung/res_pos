@@ -2,11 +2,11 @@
 	<table class="table table-striped">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Photo</th>
+                <th>Tên</th>
+                <th>Loại</th>
+                <th>Thành phần</th>
+                <th>Giá</th>
+                <th>Hình ảnh</th>
             </tr>
         </thead>
         <tbody>
@@ -17,11 +17,11 @@
                 <td>{{ item.price }}</td>
                 <td><img :src='"/storage/items/" + item.photo_url' alt="imagem" height="120px" width="120px"></img></td>
                 <td>
-	                <a class="btn btn-sm btn-primary" v-on:click.prevent="editItem(item)">Edit</a>
-	                <a class="btn btn-sm btn-danger" v-on:click.prevent="deleteItem(item)">Delete</a>
+	                <a class="btn btn-sm btn-primary" v-on:click.prevent="editItem(item)">Sửa</a>
+	                <a class="btn btn-sm btn-danger" v-on:click.prevent="deleteItem(item)">Xoá</a>
         		</td>
             </tr>
-            <a class="btn btn-sm btn-primary" v-on:click.prevent="addItem()">Add new item</a>
+            <a class="btn btn-sm btn-primary" v-on:click.prevent="addItem()">Thêm mới</a>
         </tbody>
     </table>
 </template>

@@ -2,9 +2,9 @@
     <table class="table table-striped">
         <thead>
 	        <tr>
-	            <th>table_number</th>
-	            <th>created_at</th>
-	            <th>updated_at</th>
+	            <th>Bàn</th>
+	            <th>Thời gian tạo</th>
+	            <th>Thời gian cập nhật</th>
 	        </tr>
 	    </thead>
 	    <tbody>
@@ -13,11 +13,11 @@
 	            <td>{{ table.created_at.date }}</td>
 	            <td>{{ table.updated_at.date }}</td>
 	            <td>
-	                <a class="btn btn-sm btn-primary" v-on:click.prevent="editTable(table)">Edit</a>
-	                <a class="btn btn-sm btn-danger" v-on:click.prevent="deleteTable(table)">Delete</a>
+	                <a class="btn btn-sm btn-primary" v-on:click.prevent="editTable(table)">Sửa</a>
+	                <a class="btn btn-sm btn-danger" v-on:click.prevent="deleteTable(table)">Xoá</a>
 	        	</td>
 	        </tr>
-	        <a class="btn btn-sm btn-primary" v-on:click.prevent="addTable()">Add new table</a>
+	        <a class="btn btn-sm btn-primary" v-on:click.prevent="addTable()">Thêm mới</a>
 	    </tbody>
     </table>
 </template>

@@ -2,12 +2,12 @@
 	<table class="table table-striped">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Username</th>
+                <th>Họ và tên</th>
+                <th>Tên đăng nhập</th>
                 <th>Email</th>
-                <th>Type</th>
-                <th>Photo</th>
-                <th>Block</th>
+                <th>Vị trí</th>
+                <th>Hình ảnh</th>
+                <th>Bị khoá</th>
             </tr>
         </thead>
         <tbody>
@@ -29,12 +29,12 @@
                 </td>
                 <td>
                     <template v-if="user.id !== $store.state.user.id">
-	                   <a class="btn btn-sm btn-primary" v-on:click.prevent="editUser(user)">Edit</a>
-	                   <a class="btn btn-sm btn-danger" v-on:click.prevent="deleteUser(user)">Delete</a>
+	                   <a class="btn btn-sm btn-primary" v-on:click.prevent="editUser(user)">Sửa</a>
+	                   <a class="btn btn-sm btn-danger" v-on:click.prevent="deleteUser(user)">Xoá</a>
                     </template>
         		</td>
             </tr>
-            <a class="btn btn-sm btn-primary" v-on:click.prevent="addUser()">Add new user</a>
+            <a class="btn btn-sm btn-primary" v-on:click.prevent="addUser()">Thêm mới</a>
         </tbody>
     </table>
 </template>
