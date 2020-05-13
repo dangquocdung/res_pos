@@ -18,10 +18,10 @@
             setButtonStatus: function(shift_active) {
                 if (shift_active) {
                     this.shiftButtonClass = "btn-danger";
-                    this.buttonMessage = "End shift";
+                    this.buttonMessage = "Kết thúc ca";
                 } else {
                     this.shiftButtonClass = "btn-success";
-                    this.buttonMessage = "Start shift";
+                    this.buttonMessage = "Bắt đầu ca";
                 }
             },
             flipShiftActive: function() {
@@ -30,10 +30,10 @@
                 /////////////////////////////////////////
                 // SweetAlert
                 if (this.$store.state.user.shift_active) {
-                    message = "Ending shift...";
+                    message = "Đang kết thúc ca...";
 
                 } else {
-                    message = "Starting shift...";
+                    message = "Đang bắt đầu ca...";
                 }
 
                 const toast = this.$swal.mixin({
@@ -58,10 +58,10 @@
                         this.$root.notifyCounter();
 
                         if (this.$store.state.user.shift_active) {
-                            message = "Shift has started";
+                            message = "Ca đã bắt đầu";
                             this.$root.loadActiveData();
                         } else {
-                            message = "Shift has ended";
+                            message = "Ca đã kết thúc";
                             this.$root.clearUserData(false);
                         }
 
@@ -85,8 +85,8 @@
                         // SweetAlert
                         this.$swal({
                             type: 'error',
-                            title: 'Oops',
-                            text: "Something went wrong..."
+                            title: 'Ồ',
+                            text: "Có gì đó sai sai..."
                         });
                         /////////////////////////////////////////
 
