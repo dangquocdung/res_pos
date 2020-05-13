@@ -2,8 +2,8 @@
     <div>
         <label>List of:</label>
         <select id="type" @change="getList">
-          <option value="cookers">Cookers</option>
-          <option value="waiters">Waiters</option>
+          <option value="cookers">Dau Bep</option>
+          <option value="waiters">Boi Ban</option>
         </select>
         <div>
             <template v-for="(stat, index) in list">

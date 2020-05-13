@@ -17,7 +17,7 @@ class StatsControllerAPI extends Controller
     		$stats = [];
 			
 
-    		if ($request->type == 'Waiters') {
+    		if ($request->type == 'Boi Ban') {
 
     			$users = DB::table('users')->where('type', 'waiter')->get();
     			foreach ($users as $user) {
@@ -31,7 +31,7 @@ class StatsControllerAPI extends Controller
 				    array_push($stats,["id" => $user->id, "name" => $user->name, "type" => $user->type, "avgOrders" => $avgOrders, "avgMeals" => $avgMeals]);
     			}
 
-    		} else if ($request->type == 'Cookers') {
+    		} else if ($request->type == 'Dau Bep') {
 
     			$users = DB::table('users')->where('type', 'cook')->get();
     			foreach ($users as $user) {
