@@ -2,28 +2,28 @@
 	<div class="jumbotron">
 	    <h2>Add Item</h2>
 	    <div class="form-group">
-	        <label for="inputName">Name</label>
+	        <label for="inputName">Tên</label>
 	        <input
 	            type="text" class="form-control"
 	            name="name" id="itemName"
 	            placeholder="Item Name"/>
 	    </div>
 	    <div class="form-group">
-	        <label for="inputType">Type</label>
+	        <label for="inputType">Loại</label>
 	        <select class="form-control" id="itemType" name="type">
 	            <option>Món ăn</option>
 	            <option>Thức uống</option>
 	        </select>
 	    </div>
 	    <div class="form-group">
-	        <label for="inputDescription">Description</label>
+	        <label for="inputDescription">Thành phần</label>
 	        <input
 	            type="text" class="form-control"
 	            name="description" id="itemDescription"
 	            placeholder="Item Description"/>
 	    </div>
 	    <div class="form-group">
-	        <label for="inputPrice">Price</label>
+	        <label for="inputPrice">Giá</label>
 	        <input
 	            type="number" class="form-control"
 	            name="price" id="itemPrice"
@@ -38,8 +38,8 @@
         	<input type="file" id="itemPhoto" name="photo" @change='loadImage()'/>
         </div>
 	    <div class="form-group">
-	        <a class="btn btn-primary" v-on:click.prevent="addItem()">Add</a>
-	        <a class="btn btn-light" v-on:click.prevent="cancelEdit()">Cancel</a>
+	        <a class="btn btn-primary" v-on:click.prevent="addItem()">Thêm</a>
+	        <a class="btn btn-light" v-on:click.prevent="cancelEdit()">Huỷ</a>
 		</div>
 	</div>
 </template>
