@@ -1,7 +1,7 @@
 <template>
     <div class="box box-info" v-if="meal">
         <div class="box-header with-border">
-            <h3 class="box-title">Bữa ăn {{ meal.id }} - Bàn {{meal.table_number_id}}</h3>
+            <h3 class="box-title">Bữa ăn thứ {{ meal.id }} - Bàn {{meal.table_number_id}}</h3>
         </div>
         <div class="box-body table-responsive">
             <table class="table table-striped" v-if="completedOrders.length !== 0">
