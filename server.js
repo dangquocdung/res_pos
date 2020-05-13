@@ -112,7 +112,7 @@ io.on('connection', function (socket) {
     });
 
     socket.on('propagateCookOrderToWaiter', function(order) {
-        socket.broadcast.to(`waiter_${order.responsible_waiter_id}`).emit('propagateCookOrderToWaiter', order);
+        socket.broadcast.to('waiter_${order.responsible_waiter_id}').emit('propagateCookOrderToWaiter', order);
     });
 
     socket.on('propagatePendingInvoice', function(invoice) {
@@ -122,7 +122,6 @@ io.on('connection', function (socket) {
     socket.on('propagateRemovePendingInvoice', function(invoice) {
         socket.broadcast.to('cashier').emit('propagateRemovePendingInvoice', invoice);
     });
-
 
 	/*socket.on('msg_from_client', (msg, userInfo) => {
 		if (userInfo === undefined) {

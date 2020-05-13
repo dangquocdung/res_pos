@@ -97,10 +97,10 @@ router.beforeEach((to, from, next) => {
             next("/login");
 
         } else {
-            if ((to.matched.some(record => record.meta.isCook) && user.type !== 'cook') ||
-               (to.matched.some(record => record.meta.isCashier) && user.type !== 'cashier') ||
-               (to.matched.some(record => record.meta.isManager) && user.type !== 'manager') ||
-               (to.matched.some(record => record.meta.isWaiter) && user.type !== 'waiter')) {
+            if ((to.matched.some(record => record.meta.isCook) && user.type !== 'dau-bep') ||
+               (to.matched.some(record => record.meta.isCashier) && user.type !== 'thu-ngan') ||
+               (to.matched.some(record => record.meta.isManager) && user.type !== 'quan-ly') ||
+               (to.matched.some(record => record.meta.isWaiter) && user.type !== 'boi-ban')) {
 
                 next('/');
 
@@ -135,19 +135,19 @@ const app = new Vue({
         },
         loadActiveData: function() {
             switch (this.$store.state.user.type) {
-                case 'cook':
+                case 'dau-bep':
                     this.$store.dispatch('loadOrders').then(() => {
                         console.log('"cook" connect');
                         this.$socket.emit('joinCook');
                     });
                     break;
-                case 'waiter':
+                case 'boi-ban':
                     this.$store.dispatch('loadPreparedOrdersAndMeals', {
                         socket: this.$socket,
                         id: this.$store.state.user.id
                     });
                     break;
-                case 'cashier':
+                case 'thu-ngan':
                     this.$store.dispatch('loadPendingInvoices').then(() => {
                         this.$socket.emit('joinCashier');
                     });

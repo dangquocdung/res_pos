@@ -155,27 +155,27 @@
     <li><router-link to="/itemsMenu"><i class="fa fa-table"></i><span>Thực đơn</span></router-link></li>
 
     <template v-if="this.$store.state.user">
-        <template v-if="this.$store.state.user.type === 'waiter'">
+        <template v-if="this.$store.state.user.type === 'boi-ban'">
             <li><router-link to="/waiter"><i class="fa fa-briefcase"></i> <span>Bồi bàn</span></router-link></li>
         </template>
 
-        <template v-if="this.$store.state.user.type === 'cashier'">
+        <template v-if="this.$store.state.user.type === 'thu-ngan'">
             <li><router-link to="/cashier"><i class="fa fa-briefcase"></i> <span>Thu ngân</span></router-link></li>
         </template>
 
-        <template v-if="this.$store.state.user.type === 'cook'">
+        <template v-if="this.$store.state.user.type === 'dau-bep'">
             <li><router-link to="/cookOrders"><i class="fa fa-coffee"></i> <span>Đầu bếp</span></router-link></li>
         </template>
 
-        <template v-if="this.$store.state.user.type === 'manager'">
-            <li><router-link to="/dashboard"><i class="fa fa-briefcase"></i> <span>Dashboard</span></router-link></li>
-            <li><router-link to="/tables"><i class="fa fa-flag-o"></i> <span>Tables</span></router-link></li>
-            <li><router-link to="/items"><i class="fa fa-circle"></i> <span>Items</span></router-link></li>
-            <li><router-link to="/users"><i class="fa fa-users"></i> <span>Users</span></router-link></li>
-            <li><router-link to="/meals"><i class="fa fa-briefcase"></i> <span>Meals</span></router-link></li>
-            <li><router-link to="/Invoices"><i class="fa fa-briefcase"></i> <span>Invoices</span></router-link></li>
-            <li><router-link to="/stats"><i class="fa fa-circle"></i> <span>Stats</span></router-link></li>
-            <li><router-link to="/performance"><i class="fa fa-flag-o"></i> <span>Restaurant Performance</span></router-link></li>
+        <template v-if="this.$store.state.user.type === 'quan-ly'">
+            <!-- <li><router-link to="/dashboard"><i class="fa fa-briefcase"></i> <span>Dashboard</span></router-link></li> -->
+            <li><router-link to="/tables"><i class="fa fa-flag-o"></i> <span>Bàn</span></router-link></li>
+            <li><router-link to="/items"><i class="fa fa-circle"></i> <span>Món</span></router-link></li>
+            <li><router-link to="/users"><i class="fa fa-users"></i> <span>Người dùng</span></router-link></li>
+            <li><router-link to="/meals"><i class="fa fa-briefcase"></i> <span>Bữa ăn</span></router-link></li>
+            <li><router-link to="/Invoices"><i class="fa fa-briefcase"></i> <span>Hoá đơn</span></router-link></li>
+            <li><router-link to="/stats"><i class="fa fa-circle"></i> <span>Trạng thái</span></router-link></li>
+            <li><router-link to="/performance"><i class="fa fa-flag-o"></i> <span>Hiệu suất nhà hàng</span></router-link></li>
         </template>
 
     </template>

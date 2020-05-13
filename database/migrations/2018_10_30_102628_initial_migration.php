@@ -20,7 +20,7 @@ class InitialMigration extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('type', ['manager', 'cook', 'cashier', 'waiter']);
+            $table->enum('type', ['quan-ly', 'dau-bep', 'thau-ngan', 'boi-ban']);
             $table->boolean('blocked')->default(false);
             $table->string('photo_url')->nullable();
             $table->dateTime('last_shift_start')->nullable();

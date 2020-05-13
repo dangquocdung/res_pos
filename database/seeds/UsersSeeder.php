@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 class UsersSeeder extends Seeder
 {
     private $photoPath = 'public/profiles';
-    private $typesOfUsers = ['manager', 'waiter', 'cook', 'cashier'];
+    private $typesOfUsers = ['quan-ly', 'boi-ban', 'dau-bep', 'thau-ngan'];
     private $typesOfUsersPrefix = ['m', 'w', 'k', 'c'];
     private $numberOfUsers = [5,25,20,10];
     private $numberOfSoftDeletedUsers = [1,5,10,4];
