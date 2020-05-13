@@ -47,7 +47,7 @@
                     this.$swal({
                         type: 'error',
                         title: 'Oops',
-                        text: "Something went wrong..."
+                        text: "Something went wrong...456"
                     });
                 });
             }
