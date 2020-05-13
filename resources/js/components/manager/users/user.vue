@@ -6,7 +6,7 @@
             </div>
             <div class="box-body table-responsive">
                 <div class="panel panel-info">
-                    <div class="panel-body">
+                    <div class="panel-body table-responsive">
                         <select id="filter" @change="getUsers()">
                           <option value="all">All</option>
                           <option value="blocked">Blocked</option>

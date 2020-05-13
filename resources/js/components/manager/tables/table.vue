@@ -6,7 +6,7 @@
 	        </div>
 	        <div class="box-body table-responsive">
 	            <div class="panel panel-info">
-	                <div class="panel-body">
+	                <div class="panel-body table-responsive">
 	                	<!--TABLE LIST-->
 						<table-list :tables="tables" @edit-click="editTable" @delete-click="deleteTable" @add-click="addingTable" ref="tablesListRef"></table-list>
 
