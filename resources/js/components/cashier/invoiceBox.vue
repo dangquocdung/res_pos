@@ -126,16 +126,16 @@
 
                     header: {
                         columns: [
-                            { text: 'Diogo Agostinho', style: 'documentHeaderLeft' },
-                            { text: 'Gabriel Massadas', style: 'documentHeaderCenter' },
-                            { text: 'Luis Pires', style: 'documentHeaderRight' }
+                            { text: 'Đặng Quốc Dũng', style: 'documentHeaderLeft' },
+                            { text: 'www.dungthinh.com', style: 'documentHeaderCenter' },
+                            { text: '0986242487', style: 'documentHeaderRight' }
                         ]
                     },
                     footer: {
                         columns: [
                             { text: '', style: 'documentFooterLeft' },
-                            { text: 'Processado por Computador', style: 'documentFooterCenter' },
-                            { text: 'https://github.com/G4brym/DAD', style: 'documentFooterRight' }
+                            { text: 'Xử lý bằng máy tính', style: 'documentFooterCenter' },
+                            { text: 'https://dungthinh.com', style: 'documentFooterRight' }
                         ]
                     },
                     content: [
