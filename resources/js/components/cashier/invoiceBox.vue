@@ -36,7 +36,7 @@
                     </td>
                     <td></td>
                     <td>Total Price:</td>
-                    <td>{{ invoice.total_price }}€</td>
+                    <td>{{ invoice.total_price }}đ</td>
                 </tr>
                 </tbody>
             </table>
