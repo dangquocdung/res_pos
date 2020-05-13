@@ -19,7 +19,7 @@ class StatsControllerAPI extends Controller
 
     		if ($request->type == 'Boi Ban') {
 
-    			$users = DB::table('users')->where('type', 'waiter')->get();
+    			$users = DB::table('users')->where('type', 'boi-ban')->get();
     			foreach ($users as $user) {
 	    			$avgOrders = DB::select('Select AVG(dayOrders) AS "ordersPerDay" FROM (
 													SELECT COUNT(*) AS "dayOrders" FROM orders JOIN meals ON orders.meal_id = meals.id WHERE meals.responsible_waiter_id = '.$user->id.' GROUP BY DATE(orders.start)
@@ -33,7 +33,7 @@ class StatsControllerAPI extends Controller
 
     		} else if ($request->type == 'Dau Bep') {
 
-    			$users = DB::table('users')->where('type', 'cook')->get();
+    			$users = DB::table('users')->where('type', 'dau-bep')->get();
     			foreach ($users as $user) {
 	    			$avgOrders = DB::select('Select AVG(dayOrders) AS "ordersPerDay" FROM (
 													SELECT COUNT(*) AS "dayOrders" FROM orders WHERE responsible_cook_id = '.$user->id.' GROUP BY DATE(orders.start)
