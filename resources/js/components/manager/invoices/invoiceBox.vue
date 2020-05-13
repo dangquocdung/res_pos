@@ -112,7 +112,7 @@
                             style:'itemNumber'
                         },
                         {
-                            text:item.item.price + '€',
+                            text:item.item.price + 'đ',
                             style:'itemNumber'
                         },
                         {
@@ -120,7 +120,7 @@
                             style:'itemNumber'
                         },
                         {
-                            text: item.sub_total_price + '€',
+                            text: item.sub_total_price + 'đ',
                             style:'itemTotal'
                         }
                     ]);
@@ -248,7 +248,7 @@
                                             style:'itemsFooterTotalTitle'
                                         },
                                         {
-                                            text: invoice.total_price + '€',
+                                            text: invoice.total_price + 'đ',
                                             style:'itemsFooterTotalValue'
                                         }
                                     ],
