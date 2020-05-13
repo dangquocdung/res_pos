@@ -2,16 +2,16 @@
     <div>
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Users</h3>
+                <h3 class="box-title">Người dùng</h3>
             </div>
             <div class="box-body table-responsive">
                 <div class="panel panel-info">
                     <div class="panel-body table-responsive">
                         <select id="filter" @change="getUsers()">
-                          <option value="all">All</option>
-                          <option value="blocked">Blocked</option>
-                          <option value="unblocked">Unblocked</option>
-                          <option value="soft_deleted">Soft Deleted</option>
+                          <option value="all">Tất cả</option>
+                          <option value="blocked">Đã khoá</option>
+                          <option value="unblocked">Đã mở khoá</option>
+                          <option value="soft_deleted">Đã xoá</option>
                         </select>
                         <!--TABLE LIST-->
                         <user-list :users="users" @edit-click="editUser" @unblock-user="unblockUser" @block-user="blockUser" @delete-click="deleteUser" @add-click="addingUser" ref="usersListRef"></user-list>

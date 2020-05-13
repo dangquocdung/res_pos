@@ -2,7 +2,7 @@
     <div>
 		<div class="box">
 	        <div class="box-header with-border">
-	            <h3 class="box-title">Restaurant Tables</h3>
+	            <h3 class="box-title">Quản lý bàn</h3>
 	        </div>
 	        <div class="box-body table-responsive">
 	            <div class="panel panel-info">
@@ -25,7 +25,7 @@
 	    </div>
 	        <!-- /.box-body -->
 	    <div class="box-footer">
-            Footer
+            <!-- Footer -->
         </div>
         <!-- /.box-footer-->
     </div>
