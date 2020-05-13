@@ -39,7 +39,7 @@
                 </template>
                 <tr>
                     <td>Total Price:</td>
-                    <td>{{ totalPrice }}€</td>
+                    <td>{{ totalPrice }}đ</td>
                     <td></td>
                     <td></td>
                 </tr>

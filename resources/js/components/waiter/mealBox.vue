@@ -102,7 +102,7 @@
                         safeTermination = false;
                     }
                 }
-                this.totalPrice = tmp_price.toFixed(2);
+                this.totalPrice = tmp_price.toFixed(3);
 
                 this.compactedOrders = Object.assign([], compressedOrders);
                 this.safeTerminate = safeTermination;

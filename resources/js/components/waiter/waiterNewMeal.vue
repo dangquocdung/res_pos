@@ -23,7 +23,7 @@
                                aria-hidden="true"></i>
                             {{ order.item.name }}
                         </td>
-                        <td>{{ order.item.price }}€</td>
+                        <td>{{ order.item.price }}đ</td>
                         <td>
                             {{ order.responsible_cook ? order.responsible_cook.name : 'Chưa nấu' }}
                         </td>
@@ -36,7 +36,7 @@
                         </td>
                         <td>
                             <a class="btn btn-sm btn-danger" v-if="order.state === 'pending'"
-                               @click="deleteOrder($event.target, order)">Delete</a>
+                               @click="deleteOrder($event.target, order)">Xoá</a>
                         </td>
                     </tr>
                 </template>
