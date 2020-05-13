@@ -1,7 +1,7 @@
 <template>
     <div class="box box-info">
         <div class="box-header with-border">
-            <h3 class="box-title">Menu</h3>
+            <h3 class="box-title">Thực đơn</h3>
         </div>
         <div class="box-body table-responsive">
             <!--MENU LIST-->
@@ -9,29 +9,29 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Type</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Photo</th>
+                            <th>Hình ảnh</th>
+                            <th>Tên</th>
+                            <th>Loại</th>
+                            <th>Thành phần</th>
+                            <th>Giá</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-for="item in items" :key="item.id">
-                            <td>{{ item.name }}</td>
-                            <td>{{ item.type }}</td>
-                            <td>{{ item.description }}</td>
-                            <td>{{ item.price + '€'}}</td>
                             <td>
                                 <img :src='"/storage/items/" + item.photo_url'
                                      alt="imagem" height="120px" width="120px"/>
                             </td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.type }}</td>
+                            <td>{{ item.description }}</td>
+                            <td>{{ item.price + '€'}}</td>
                         </tr>
                     </tbody>
                 </table>
             </template>
             <div class="text-center" v-else>
-                Loading...
+                Đang tải...
             </div>
         </div>
     </div>
