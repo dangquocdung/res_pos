@@ -132,7 +132,7 @@
 
                     header: {
                         columns: [
-                            { text: 'Đặng Quốc Dũng', style: 'documentHeaderLeft' },
+                            { text: 'Công ty phần mềm Dũng Thịnh', style: 'documentHeaderLeft' },
                             { text: 'www.dungthinh.com', style: 'documentHeaderCenter' },
                             { text: '0986242487', style: 'documentHeaderRight' }
                         ]
@@ -140,7 +140,7 @@
                     footer: {
                         columns: [
                             { text: '', style: 'documentFooterLeft' },
-                            { text: 'Xử lý bằng máy tính', style: 'documentFooterCenter' },
+                            { text: 'Phần mềm nhà hàng thông minh', style: 'documentFooterCenter' },
                             { text: 'https://dungthinh.com', style: 'documentFooterRight' }
                         ]
                     },
