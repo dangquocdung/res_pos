@@ -24,7 +24,7 @@
                         <td>{{ order.item.name }}</td>
                         <td>{{ order.responsible_cook.name }}</td>
                         <td>
-                            <a class="btn btn-sm btn-warning" v-on:click.prevent="deliverOrder(order, index)">Deliver</a>
+                            <a class="btn btn-sm btn-warning" v-on:click.prevent="deliverOrder(order, index)">Giao cho khách</a>
                         </td>
                     </tr>
                 </template>

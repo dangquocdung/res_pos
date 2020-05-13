@@ -50,15 +50,15 @@
 
                             this.$swal({
                                 type: 'success',
-                                title: 'Terminated',
-                                text: 'This meal was terminated'
+                                title: 'Kết thúc',
+                                text: 'Bữa ăn đã kết thúc'
                             });
                         }
                     }).catch(() => {
                         this.$swal({
                             type: 'error',
-                            title: 'Oops...',
-                            text: 'Something went wrong!',
+                                title: 'Ồ',
+                                text: 'Có gì đó sai sai...',
                         });
                     });
             },
@@ -73,14 +73,14 @@
 
                             this.$swal({
                                 type: 'success',
-                                title: 'Delivered',
-                                text: 'This order was delivered',
+                                title: 'Đã giao',
+                                text: 'Món ăn này đã được giao cho khách',
                             });
                         } else {
                             this.$swal({
                                 type: 'error',
-                                title: 'Oops...',
-                                text: 'Something went wrong!',
+                                title: 'Ồ',
+                                text: 'Có gì đó sai sai...',
                             });
                         }
                     });

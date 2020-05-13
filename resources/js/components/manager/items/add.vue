@@ -11,8 +11,8 @@
 	    <div class="form-group">
 	        <label for="inputType">Type</label>
 	        <select class="form-control" id="itemType" name="type">
-	            <option>dish</option>
-	            <option>drink</option>
+	            <option>Món ăn</option>
+	            <option>Thức uống</option>
 	        </select>
 	    </div>
 	    <div class="form-group">
