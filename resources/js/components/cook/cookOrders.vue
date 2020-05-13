@@ -1,16 +1,16 @@
 <template>
     <div class="box box-info">
         <div class="box-header with-border">
-            <h3 class="box-title">Orders</h3>
+            <h3 class="box-title">Món đang yêu cầu</h3>
         </div>
         <div class="box-body table-responsive">
             <template v-if="orders">
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Item</th>
-                        <th>State</th>
-                        <th>Actions</th>
+                        <th>Món</th>
+                        <th>Tình trạng</th>
+                        <th>Thao tác</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -26,12 +26,12 @@
                                 <template v-if="order.state === 'confirmed'">
                                     <button class="btn btn-xs btn-primary"
                                             @click="setState(order, 'in preparation', 'updateOrders')">
-                                        Preparing
+                                        Đang chuẩn bị
                                     </button>
                                 </template>
                                 <button class="btn btn-xs btn-danger"
                                         @click="setState(order, 'prepared', 'deleteOrder')">
-                                    Prepared
+                                    Đã sẵn sàng
                                 </button>
                             </td>
                         </tr>
@@ -39,10 +39,10 @@
                 </table>
             </template>
             <div class="text-center" v-else-if="this.$store.state.user.shift_active === 0">
-                You are not doing a shift
+                Bạn không trong ca làm
             </div>
             <div class="text-center" v-else>
-                Loading...
+                Đang tải...
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@
                             timer: 3000
                         });
                         toast({
-                            title: 'Done!',
+                            title: 'Xong!',
                             type: 'success'
                         });
                         /////////////////////////////////////////
@@ -105,8 +105,8 @@
                         // SweetAlert
                         this.$swal({
                             type: 'error',
-                            title: 'Oops',
-                            text: "Something went wrong..."
+                            title: 'Ồ',
+                            text: "Có gì đó sai sai..."
                         });
                         /////////////////////////////////////////
                     });
