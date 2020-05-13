@@ -2,14 +2,14 @@
 	<div class="jumbotron">
 	    <h2>Edit User</h2>
 	    <div class="form-group">
-	        <label for="inputName">Name</label>
+	        <label for="inputName">Họ và tên</label>
 	        <input
 	            type="text" class="form-control" v-model="user.name"
 	            name="name" id="userName"
 	            placeholder="User Name"/>
 	    </div>
 	    <div class="form-group">
-	        <label for="inputUsername">Username</label>
+	        <label for="inputUsername">Tên đăng nhập</label>
 	        <input
 	            type="text" class="form-control" v-model="user.username"
 	            name="username" id="username"
@@ -23,12 +23,12 @@
 	            placeholder="User Email"/>
 	    </div>
 	    <div class="form-group">
-	        <label for="inputType">Type</label>
+	        <label for="inputType">Vị trí</label>
 	        <select class="form-control" id="userType" name="type" v-model="user.type" >
-	            <option>manager</option>
-	            <option>waiter</option>
-	            <option>cook</option>
-	            <option>cashier</option>
+	            <option>quan-ly</option>
+	            <option>boi-ban</option>
+	            <option>dau-bep</option>
+	            <option>thu-ngan</option>
 	        </select>
 	    </div>
 	    <div class="form-group">
@@ -43,8 +43,8 @@
         	<input type="file" id="userPhoto" name="photo" @change='loadImage()'/>
         </div>
 	    <div class="form-group">
-	        <a class="btn btn-primary" v-on:click.prevent="saveUser()">Save</a>
-	        <a class="btn btn-light" v-on:click.prevent="cancelEdit()">Cancel</a>
+	        <a class="btn btn-primary" v-on:click.prevent="saveUser()">Lưu</a>
+	        <a class="btn btn-light" v-on:click.prevent="cancelEdit()">Huỷ</a>
 		</div>
 	</div>
 </template>

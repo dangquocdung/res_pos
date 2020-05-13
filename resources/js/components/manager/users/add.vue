@@ -39,10 +39,10 @@
 	    <div class="form-group">
 	        <label for="inputType">Type</label>
 	        <select class="form-control" id="userType" name="type" >
-	            <option>manager</option>
-	            <option>waiter</option>
-	            <option>cook</option>
-	            <option>cashier</option>
+	            <option>quan-ly</option>
+	            <option>boi-ban</option>
+	            <option>dau-bep</option>
+	            <option>thu-ngan</option>
 	        </select>
 	    </div>
 	    <div class="form-group">
