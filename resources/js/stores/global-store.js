@@ -163,7 +163,7 @@ export default new Vuex.Store({
     },
     actions: {
         clearUserData (context, { type }) {
-            if (type === 'waiter' || type === 'cook') {
+            if (type === 'boi-ban' || type === 'dau-bep') {
                 if (context.state.orders) {
                     context.commit('clearOrders');
                 }
