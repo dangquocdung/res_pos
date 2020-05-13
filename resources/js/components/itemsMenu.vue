@@ -25,7 +25,7 @@
                             <td>{{ item.name }}</td>
                             <td>{{ item.type }}</td>
                             <td>{{ item.description }}</td>
-                            <td>{{ item.price + '€'}}</td>
+                            <td>{{ item.price + 'đ'}}</td>
                         </tr>
                     </tbody>
                 </table>
