@@ -210,11 +210,11 @@
                         {
                             columns: [
                                 {
-                                    text: invoice.waiter + ' \n Restaurante, Lda.',
+                                    text: invoice.waiter + ' \n Nhà hàng Hải Sài Gòn',
                                     style: 'invoiceBillingDetails'
                                 },
                                 {
-                                    text: invoice.name + ' \n PT' + invoice.nif,
+                                    text: invoice.name + ' \n MST: ' + invoice.nif,
                                     style: 'invoiceBillingDetails'
                                 },
                             ]
