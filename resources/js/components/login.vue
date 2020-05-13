@@ -1,26 +1,26 @@
 <template>
     <div class="box box-default">
         <div class="box-header with-border">
-            <h3 class="box-title">Login</h3>
+            <h3 class="box-title">Đăng nhập</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body table-responsive">
             <div class="form-group">
-                <label for="inputEmail">Email or Username</label>
+                <label for="inputEmail">Email hoặc tên người dùng</label>
                 <input
                     type="email" class="form-control" v-model.trim="user.email"
                     @keyup.13="focusPwd" name="email" id="inputEmail"
                     placeholder="Email address"/>
             </div>
             <div class="form-group">
-                <label for="inputPassword">Password</label>
+                <label for="inputPassword">Mật khẩu</label>
                 <input
                     type="password" class="form-control" v-model="user.password" ref="passwordBox"
                     @keyup.13="login" name="password" id="inputPassword"
                     placeholder="Password"/>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary" @click="login">Login</button>
+                <button class="btn btn-primary" @click="login">Đăng nhập</button>
             </div>
         </div>
         <!-- /.box-body -->
@@ -47,8 +47,8 @@
                     // SweetAlert
                     this.$swal({
                         type: 'info',
-                        title: "Can't login",
-                        text: 'You must fill in all fields'
+                        title: "Không thể đăng nhập",
+                        text: 'Bạn phải điền đầy đủ thông tin'
                     });
 
                     return;
@@ -63,7 +63,7 @@
                     showConfirmButton: false
                 });
                 toast({
-                    title: 'Logging in...',
+                    title: 'Đang đăng nhập...',
                     onBeforeOpen: () => {
                         this.$swal.showLoading();
                     }
@@ -94,7 +94,7 @@
                         });
                         toast({
                             type: 'success',
-                            title: 'Signed in successfully'
+                            title: 'Đã đăng nhập thành công'
                         });
                         /////////////////////////////////////////
                     })
@@ -106,8 +106,8 @@
                         // SweetAlert
                         this.$swal({
                             type: 'error',
-                            title: 'Login failed',
-                            text: 'Invalid credentials!'
+                            title: 'Đăng nhập thất bại',
+                            text: 'Thông tin không hợp lệ!'
                         });
                         /////////////////////////////////////////
                     });
