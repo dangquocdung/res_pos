@@ -2,7 +2,7 @@
     <div>
         <div class="box" :class="{'box-colapsed': !showPending}">
             <div class="box-header with-border">
-                <h3 class="box-title">Pending Invoices</h3>
+                <h3 class="box-title">Hóa đơn đang chờ xử lý</h3>
 
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -14,10 +14,10 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Table</th>
-                        <th>Waiter</th>
-                        <th>Total Price</th>
-                        <th>Actions</th>
+                        <th>Bàn</th>
+                        <th>Người phục vụ</th>
+                        <th>Tổng cộng</th>
+                        <th>Thao tác</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -27,7 +27,7 @@
                             <td>{{ invoice.waiter }}</td>
                             <td>{{ invoice.total_price }}</td>
                             <td>
-                                <a class="btn btn-sm btn-success" v-on:click.prevent="markPaid(invoice, index)">Mark as Paid</a>
+                                <a class="btn btn-sm btn-success" v-on:click.prevent="markPaid(invoice, index)">Đã trả tiền</a>
                             </td>
                         </tr>
                     </template>
@@ -41,19 +41,19 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Invoice {{ activeInvoice.id }} {{activeInvoice.total_price}}đ - Table {{activeInvoice.table}} - {{activeInvoice.date}}</h4>
+                        <h4 class="modal-title">Hoá đơn {{ activeInvoice.id }} {{activeInvoice.total_price}}đ - Bàn {{activeInvoice.table}} - {{activeInvoice.date}}</h4>
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal" data-bitwarden-watching="1">
                             <div class="form-group">
-                                <label for="markPaidName" class="col-sm-2 control-label">Name</label>
+                                <label for="markPaidName" class="col-sm-2 control-label">Tên khách hàng</label>
 
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="markPaidName">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="markPaidNIF" class="col-sm-2 control-label">NIF</label>
+                                <label for="markPaidNIF" class="col-sm-2 control-label">Mã số thuế</label>
 
                                 <div class="col-sm-10">
                                     <input type="number" class="form-control" id="markPaidNIF">
@@ -62,8 +62,8 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-success" v-on:click.prevent="saveInvoice()">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Huỷ</button>
+                        <button type="button" class="btn btn-success" v-on:click.prevent="saveInvoice()">Lưu</button>
                     </div>
                 </div>
             </div>
