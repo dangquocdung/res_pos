@@ -32,7 +32,7 @@ class NullableResponsibleCook extends Migration
      */
     public function down()
     {
-        $firstCook = DB::table('users')->where('type', 'cook')->first();
+        $firstCook = DB::table('users')->where('type', 'dau-bep')->first();
         if ($firstCook != null) {
             DB::table('orders')->where('responsible_cook_id', null)
                               ->update(['responsible_cook_id' => $firstCook->id]);

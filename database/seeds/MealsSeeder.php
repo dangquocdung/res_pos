@@ -71,7 +71,7 @@ class MealsSeeder extends Seeder
     private function getRandomCook()
     {
         static $cooks;
-        $cooks = $cooks != null ? $cooks : DB::table('users')->where('type', 'cook')->pluck('id');
+        $cooks = $cooks != null ? $cooks : DB::table('users')->where('type', 'dau-bep')->pluck('id');
         return $cooks->random();
     }
 

@@ -38,7 +38,7 @@ class OrderControllerAPI extends Controller
                 }
             }
 
-        } else if ($user->type === 'cook') {
+        } else if ($user->type === 'dau-bep') {
             $baseQuery = Order::whereRaw("(state in ('in preparation', 'confirmed'))")
                               ->whereRaw("(responsible_cook_id = $uid or responsible_cook_id is null)")
                               ->orderBy('state', 'desc')
@@ -64,7 +64,7 @@ class OrderControllerAPI extends Controller
     }
 
     public function update(Request $request, $id) {
-        if (Auth::user()->type === 'cook' && Auth::user()->shift_active === 1) {
+        if (Auth::user()->type === 'dau-bep' && Auth::user()->shift_active === 1) {
             $order = Order::find($id);
 
             $order->state = $request->get('state');
