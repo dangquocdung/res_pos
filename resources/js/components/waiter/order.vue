@@ -1,6 +1,6 @@
 <template>
     <div>
-        <label :for="'input_' + mealId + '_' + num">Item {{ num }}</label>
+        <label :for="'input_' + mealId + '_' + num">Món {{ num }}</label>
         <div class="input-group">
             <select class="form-control" :id="'input_' + mealId + '_' + num" v-model="itemName">
                 <option v-for="item in this.$store.state.items" :value="item.name">
