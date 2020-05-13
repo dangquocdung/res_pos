@@ -1,7 +1,7 @@
 <template>
     <div class="box" :class="{'box-colapsed': !showPrepared}">
         <div class="box-header with-border">
-            <h3 class="box-title">Prepared Orders</h3>
+            <h3 class="box-title">Món đã sẵn sàng</h3>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -13,9 +13,9 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Cook</th>
-                    <th>Actions</th>
+                    <th>Món</th>
+                    <th>Đầu bếp</th>
+                    <th>Thao tác</th>
                 </tr>
                 </thead>
                 <tbody>
