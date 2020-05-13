@@ -169,13 +169,15 @@
 
         <template v-if="this.$store.state.user.type === 'quan-ly'">
             <!-- <li><router-link to="/dashboard"><i class="fa fa-briefcase"></i> <span>Dashboard</span></router-link></li> -->
-            <li><router-link to="/tables"><i class="fa fa-flag-o"></i> <span>Bàn</span></router-link></li>
-            <li><router-link to="/items"><i class="fa fa-circle"></i> <span>Món</span></router-link></li>
-            <li><router-link to="/users"><i class="fa fa-users"></i> <span>Người dùng</span></router-link></li>
-            <li><router-link to="/meals"><i class="fa fa-briefcase"></i> <span>Bữa ăn</span></router-link></li>
+            <li><router-link to="/stats"><i class="fa fa-circle"></i> <span>Trạng thái món</span></router-link></li>
+            <li><router-link to="/meals"><i class="fa fa-briefcase"></i> <span>Bữa ăn của khách</span></router-link></li>
             <li><router-link to="/Invoices"><i class="fa fa-briefcase"></i> <span>Hoá đơn</span></router-link></li>
-            <li><router-link to="/stats"><i class="fa fa-circle"></i> <span>Trạng thái</span></router-link></li>
+            <li><router-link to="/tables"><i class="fa fa-flag-o"></i> <span>Quản lý Bàn</span></router-link></li>
+            <li><router-link to="/items"><i class="fa fa-circle"></i> <span>Quản lý Món</span></router-link></li>
+            <li><router-link to="/users"><i class="fa fa-users"></i> <span>Người dùng</span></router-link></li>
             <li><router-link to="/performance"><i class="fa fa-flag-o"></i> <span>Hiệu suất nhà hàng</span></router-link></li>
+
+
         </template>
 
     </template>
