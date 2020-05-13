@@ -17,7 +17,7 @@ class OrderControllerAPI extends Controller
     {
         $uid = Auth::id();
         $user = Auth::user();
-        if ($user->type === 'waiter') {
+        if ($user->type === 'boi-ban') {
             $baseQuery = Order::whereIn('meal_id', function ($query) use ($uid) {
                 $query->select('id')
                     ->from(with(new Meal)->getTable())
@@ -97,7 +97,7 @@ class OrderControllerAPI extends Controller
 
     public function store(Request $request)
     {
-        if (Auth::user()->type !== 'waiter') {
+        if (Auth::user()->type !== 'boi-ban') {
             return response()->json(null, 401);
         }
 
@@ -144,7 +144,7 @@ class OrderControllerAPI extends Controller
 
     public function confirm($id)
     {
-        if (Auth::user()->type !== 'waiter') {
+        if (Auth::user()->type !== 'boi-ban') {
             return response()->json(null, 401);
         }
 

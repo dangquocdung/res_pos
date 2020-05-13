@@ -14,7 +14,7 @@
                 <thead>
                     <tr>
                         <th>AVG Orders p/day</th>
-                        <template v-if="stat.type == 'waiter'">
+                        <template v-if="stat.type == 'boi-ban'">
                             <th>AVG Meals p/day</th>
                         </template>
                     </tr>
@@ -24,7 +24,7 @@
                         <template v-for="order in stat.avgOrders">
                             <td>{{ order.ordersPerDay }}</td>
                         </template>
-                        <template v-if="stat.type == 'waiter'" v-for="meal in stat.avgMeals">
+                        <template v-if="stat.type == 'boi-ban'" v-for="meal in stat.avgMeals">
                             <td>{{ meal.mealsPerDay }}</td>
                         </template>  
                     </tr>       

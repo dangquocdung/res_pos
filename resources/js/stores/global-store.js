@@ -168,7 +168,7 @@ export default new Vuex.Store({
                     context.commit('clearOrders');
                 }
 
-                if (type === 'waiter') {
+                if (type === 'boi-ban') {
                     context.commit('clearWaiterMeals');
                 }
             }

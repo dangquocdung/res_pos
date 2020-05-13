@@ -64,7 +64,7 @@ class TableControllerAPI extends Controller
     }
 
     public function checkTable($table_number) {
-        if (Auth::user()->type !== 'waiter') {
+        if (Auth::user()->type !== 'boi-ban') {
             return response()->json(null, 401);
         }
 
