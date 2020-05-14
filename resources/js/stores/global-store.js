@@ -198,9 +198,9 @@ export default new Vuex.Store({
                     let mealsArray = meals.data.data;
                     mealsArray.forEach((meal) => {
                         meal.orders.forEach((order) => {
-                            if (order.state === "Đang chờ") {
+                            if (order.state === "pending") {
                                 axios.put(`/api/orders/${order.id}/confirm`);
-                                order.state = "Đã xác nhận";
+                                order.state = "confirmed";
                                 pendingOrders.push(order);
                             }
                         })

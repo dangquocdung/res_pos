@@ -207,7 +207,7 @@ const app = new Vue({
         },
         propagateCookOrderToWaiter: function(order) {
             this.$store.commit('updateWaiterOrder', order);
-            if (order.state === 'Chuẩn bị xong') {
+            if (order.state === 'prepared') {
                 this.$refs.notifications.addNotif(`Order (${order.item.name}) has been prepared`,
                     (order.item.type === 'dish' ? 'fa-cutlery' : 'fa-glass')
                     + " text-red", "/#/waiter");
