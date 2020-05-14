@@ -118,8 +118,8 @@
                         // SweetAlert
                         this.$swal({
                             type: 'error',
-                            title: 'Table is taken',
-                            text: "An active meal already exists on this table"
+                            title: 'Bàn này đã được đặt',
+                            text: "Một bữa ăn đang diễn ra trên bàn này"
                         });
                         /////////////////////////////////////////
 
@@ -133,7 +133,7 @@
                             timer: 3000
                         });
                         toast({
-                            title: `Active meal created at table number ${result.value.data.table_number_id}`,
+                            title: `Một bữa ăn đã được tạo tại bàn ${result.value.data.table_number_id}`,
                             type: 'success'
                         });
                         /////////////////////////////////////////
@@ -144,8 +144,8 @@
                             // SweetAlert
                             this.$swal({
                                 type: 'error',
-                                title: 'Non-existing table',
-                                text: "The submitted table number does not exist"
+                                title: 'Bàn này không tồn tại',
+                                text: "Số của bàn bạn chọn không tồn tại"
                             });
                             /////////////////////////////////////////
 
@@ -154,8 +154,8 @@
                             // SweetAlert
                             this.$swal({
                                 type: 'error',
-                                title: 'Oops',
-                                text: "Something went wrong... 123"
+                                title: 'Ồ',
+                                text: "Có gì đó sai sai..."
                             });
                             /////////////////////////////////////////
                         }

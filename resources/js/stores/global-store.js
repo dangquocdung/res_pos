@@ -199,7 +199,7 @@ export default new Vuex.Store({
                     mealsArray.forEach((meal) => {
                         meal.orders.forEach((order) => {
                             if (order.state === "pending") {
-                                axios.put(`/api/orders/${order.id}/confirm`);
+                                axios.put('/api/orders/${order.id}/confirm');
                                 order.state = "confirmed";
                                 pendingOrders.push(order);
                             }

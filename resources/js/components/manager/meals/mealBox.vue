@@ -33,12 +33,12 @@
                         </td>
                         <td>
                             <a class="btn btn-sm btn-danger" v-if="order.state === 'pending'"
-                               v-on:click.prevent="deleteOrder(order)">Delete</a>
+                               v-on:click.prevent="deleteOrder(order)">Xoá</a>
                         </td>
                     </tr>
                 </template>
                 <tr>
-                    <td>Total Price:</td>
+                    <td>Tổng cộng:</td>
                     <td>{{ totalPrice }}đ</td>
                     <td></td>
                     <td></td>
