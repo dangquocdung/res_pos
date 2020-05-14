@@ -1,7 +1,7 @@
 <template>
     <div class="box box-info">
         <div class="box-header with-border">
-            <h3 class="box-title">Edit Account Information</h3>
+            <h3 class="box-title">Thông tin tài khoản</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body table-responsive" v-if="changedUser">
@@ -11,7 +11,7 @@
             </div>
 
             <div class="form-group">
-                <button class="btn btn-info" @click="$router.push('password')">Change password</button>
+                <button class="btn btn-info" @click="$router.push('password')">Đổi mật khẩu</button>
             </div>
 
             <account-validate input-id="inputUsername" v-model="changedUser.username"
@@ -27,7 +27,7 @@
                               @update-valid="validName = $event"></account-validate>
 
             <div class="form-group" >
-                <div style="margin-bottom: 5px;"><b>Photo</b></div>
+                <div style="margin-bottom: 5px;"><b>Hình ảnh</b></div>
                 <template v-if="currentImg">
                     <img :src="currentImg" alt="Profile Photo" id="accountPhoto"/>
                 </template>
@@ -44,7 +44,7 @@
             </div>
             <br/>
             <div class="form-group">
-                <button class="btn btn-primary" @click="saveUser()">Save</button>
+                <button class="btn btn-primary" @click="saveUser()">Lưu</button>
             </div>
         </div>
         <!-- /.box-body -->
