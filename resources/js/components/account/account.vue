@@ -1,7 +1,7 @@
 <template>
     <div class="box box-info">
         <div class="box-header with-border">
-            <h3 class="box-title">Edit Account Information</h3>
+            <h3 class="box-title">Sửa thông tin tài khoản</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body table-responsive" v-if="changedUser">
@@ -22,12 +22,10 @@
 
             <account-validate input-id="inputName" v-model="changedUser.name"
                               field-name="name" length="3"
-                              :regex="new RegExp('^[A-Za-záàâãéèêíóôõúçÁÀÂÃÉÈÍÓÔÕÚÇ ]+$')"
-                              regex-error="Name can only contain letters and whitespaces"
                               @update-valid="validName = $event"></account-validate>
 
             <div class="form-group" >
-                <div style="margin-bottom: 5px;"><b>Photo</b></div>
+                <div style="margin-bottom: 5px;"><b>Hình ảnh</b></div>
                 <template v-if="currentImg">
                     <img :src="currentImg" alt="Profile Photo" id="accountPhoto"/>
                 </template>
@@ -40,11 +38,11 @@
                 <input type="file" id="inputAccPhoto" name="photo" @change='loadImage()'/>
             </div>
             <div v-show="showRevert">
-                <button class="btn btn-default" @click="revertImg()">Revert</button>
+                <button class="btn btn-default" @click="revertImg()">Hoàn nguyên</button>
             </div>
             <br/>
             <div class="form-group">
-                <button class="btn btn-primary" @click="saveUser()">Save</button>
+                <button class="btn btn-primary" @click="saveUser()">Lưu</button>
             </div>
         </div>
         <!-- /.box-body -->
