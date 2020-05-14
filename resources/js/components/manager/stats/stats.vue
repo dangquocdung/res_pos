@@ -1,9 +1,9 @@
 <template>
     <div>
-        <label>List of:</label>
+        <label>Danh sách của:</label>
         <select id="type" @change="getList">
-          <option value="cookers">Dau Bep</option>
-          <option value="waiters">Boi Ban</option>
+          <option value="cookers">Đầu bếp</option>
+          <option value="waiters">Bồi bàn (phục vụ)</option>
         </select>
         <div>
             <template v-for="(stat, index) in list">
@@ -71,7 +71,7 @@
                     .catch(error => {
                         this.$swal({
                             type: 'error',
-                            text: 'Oh no, something went wrong!! Try again!'
+                            text: 'Ồ không, có gì đó sai sai. Hãy thử lại'
                         });
                     });
             },

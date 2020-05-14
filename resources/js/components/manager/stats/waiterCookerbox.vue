@@ -13,9 +13,9 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>AVG Orders p/day</th>
+                        <th>Trung bình gọi món mỗi ngày</th>
                         <template v-if="stat.type == 'boi-ban'">
-                            <th>AVG Meals p/day</th>
+                            <th>Trung bình bữa ăn mỗi ngày</th>
                         </template>
                     </tr>
                 </thead>
