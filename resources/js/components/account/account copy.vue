@@ -16,13 +16,13 @@
 
             <account-validate input-id="inputUsername" v-model="changedUser.username"
                               field-name="username" length="2"
-                              :regex="new RegExp('^[A-Za-z0-9_-]+$')"
+                              :regex="new RegExp('^[A-Za-záàâãéèêíóôõúçÁÀÂÃÉÈÍÓÔÕÚÇ0-9_-]+$')"
                               regex-error="Username can only contain letters, numbers and underscores"
                               @update-valid="validUsername = $event"></account-validate>
 
             <account-validate input-id="inputName" v-model="changedUser.name"
                               field-name="name" length="3"
-                              :regex="new RegExp('^[A-Za-zễặậảũố]+$')"
+                              :regex="new RegExp('^[A-Za-záàâãéèêíóôõúçÁÀÂÃÉÈÍÓÔÕÚÇ ]+$')"
                               regex-error="Name can only contain letters and whitespaces"
                               @update-valid="validName = $event"></account-validate>
 
