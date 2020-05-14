@@ -18,19 +18,19 @@
                             <td>{{ order.item.name }}</td>
                             <td>
                                 <span class="label"
-                                      :class="order.state === 'confirmed' ? 'label-success' : 'label-warning'">
+                                      :class="order.state === 'Đã xác nhận' ? 'label-success' : 'label-warning'">
                                     {{ order.state }}
                                 </span>
                             </td>
                             <td>
-                                <template v-if="order.state === 'confirmed'">
+                                <template v-if="order.state === 'Đã xác nhận'">
                                     <button class="btn btn-xs btn-primary"
-                                            @click="setState(order, 'in preparation', 'updateOrders')">
+                                            @click="setState(order, 'Đang chuẩn bị', 'updateOrders')">
                                         Đang chuẩn bị
                                     </button>
                                 </template>
                                 <button class="btn btn-xs btn-danger"
-                                        @click="setState(order, 'prepared', 'deleteOrder')">
+                                        @click="setState(order, 'Chuẩn bị xong', 'deleteOrder')">
                                     Đã sẵn sàng
                                 </button>
                             </td>

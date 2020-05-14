@@ -16,8 +16,8 @@
                 </thead>
                 <tbody>
                 <template v-for="order in completedOrders">
-                    <tr :class="{'table-warning': order.state === 'pending',
-                                 'table-green': order.state === 'confirmed'}" :key="order.id">
+                    <tr :class="{'table-warning': order.state === 'Đang chờ',
+                                 'table-green': order.state === 'Đã xác nhận'}" :key="order.id">
                         <td><i class="fa" :class="{'fa-glass': order.item.type === 'drink',
                                                     'fa-cutlery': order.item.type === 'dish'}"
                                aria-hidden="true"></i>
@@ -29,13 +29,13 @@
                         </td>
                         <td>
                             <span class="label label-info"
-                                  :class="{'label-warning': order.state === 'pending',
-                                           'label-success': order.state === 'confirmed'}">
+                                  :class="{'label-warning': order.state === 'Đang chờ',
+                                           'label-success': order.state === 'Đã xác nhận'}">
                                 {{ order.state }}
                             </span>
                         </td>
                         <td>
-                            <a class="btn btn-sm btn-danger" v-if="order.state === 'pending'"
+                            <a class="btn btn-sm btn-danger" v-if="order.state === 'Đang chờ'"
                                @click="deleteOrder($event.target, order)">Xoá</a>
                         </td>
                     </tr>
@@ -102,7 +102,7 @@
 
                 }).catch((payload) => {
                     if (payload.response.status) {
-                        order.state = "confirmed";
+                        order.state = "Đã xác nhận";
                     }
 
                     /////////////////////////////////////////
@@ -123,12 +123,12 @@
             confirmOrder: function(order) {
                 clearTimeout(this.timeouts[order.id]);
                 delete this.timeouts[order.id];
-                order.state = "confirmed";
+                order.state = "Đã xác nhận";
                 return order;
             },
             doneMeal: function() {
                 this.completedOrders.forEach((order) => {
-                    if (order.state === "pending") {
+                    if (order.state === "Đang chờ") {
                         this.confirmOrder(order);
                     }
 

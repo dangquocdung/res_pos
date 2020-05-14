@@ -66,7 +66,7 @@
                 this.$http.post('api/orders/' + order.id + '/deliver')
                     .then(response => {
                         if (response.status === 200) {
-                            order.state = "delivered";
+                            order.state = "Đã giao";
                             this.$store.commit('removeWaiterPreparedOrders', index);
                             this.$socket.emit('propagateWaiterDeliveries');
                             this.$store.commit('updateWaiterOrder', order);
