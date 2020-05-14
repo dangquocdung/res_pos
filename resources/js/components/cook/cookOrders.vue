@@ -25,7 +25,7 @@
                             <td>
                                 <template v-if="order.state === 'confirmed'">
                                     <button class="btn btn-xs btn-primary"
-                                            @click="setState(order, 'on preparation', 'updateOrders')">
+                                            @click="setState(order, 'in preparation', 'updateOrders')">
                                         Đang chuẩn bị
                                     </button>
                                 </template>
