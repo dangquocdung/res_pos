@@ -22,7 +22,7 @@
 
             <account-validate input-id="inputName" v-model="changedUser.name"
                               field-name="name" length="3"
-                              :regex="new RegExp('^[A-Za-zĐễặậảũố]+$')"
+                              :regex="new RegExp('^[A-Za-zĐễặậảũố ]+$')"
                               regex-error="Name can only contain letters and whitespaces"
                               @update-valid="validName = $event"></account-validate>
 
