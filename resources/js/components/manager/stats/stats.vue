@@ -3,7 +3,7 @@
         <label>Danh sách của:</label>
         <select id="type" @change="getList">
           <option value="cookers">Đầu bếp</option>
-          <option value="waiters">Bồi bàn (phục vụ)</option>
+          <option value="waiters">Bồi bàn</option>
         </select>
         <div>
             <template v-for="(stat, index) in list">
